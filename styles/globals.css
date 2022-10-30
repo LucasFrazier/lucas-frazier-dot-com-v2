@@ -1,26 +1,150 @@
-html,
+/* Transferred from index.css */
+
+@import-normalize;
+/* bring in normalize.css styles */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Custom Properties */
+
+:root {
+    --ff-primary: Montserrat, sans-serif;
+    --ff-secondary: 'Source Sans Pro', sans-serif;
+
+    --fw-light: 300;
+    --fw-reg: 400;
+    --fw-med: 500;
+    --fw-bold: 700;
+
+    --clr-light: #f8f8f8;
+    --clr-dark: #282828;
+    --clr-black: #111;
+    --clr-accent: #93bead;
+
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+
+    --bs: 0.25em 0.25em 0.75em rgb(255, 255, 255),
+        0.125em 0.125em 0.25em rgb(255, 255, 255);
+
+    --border-radius: 3px;
+}
+
+@media (min-width: 800px) {
+    :root {
+        --fs-h1: 4.5rem;
+        --fs-h2: 3.75rem;
+        --fs-h3: 1.5rem;
+        --fs-body: 1.125rem;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    background: var(--clr-dark);
+    color: var(--clr-light);
+    margin: 0;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    line-height: 1.6;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+section:not(.pane) {
+    padding: 5em 2em;
 }
 
-* {
-  box-sizing: border-box;
+img {
+    display: block;
+    max-width: 100%;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+strong {
+    font-weight: var(--fw-bold);
+}
+
+:focus {
+    outline: 3px solid var(--clr-accent);
+    outline-offset: 3px;
+}
+
+/* Buttons */
+
+.btn {
+    display: inline-block;
+    padding: 0.5em 2.5em;
+    background: var(--clr-accent);
+    color: var(--clr-dark);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: var(--fw-bold);
+    transition: transform 200ms ease-in-out;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+/* Transferred from App.css */
+
+/* Typography */
+
+h1,
+h2,
+h3 {
+    line-height: 1;
+    margin: 0;
+}
+
+h1 {
+    font-size: var(--fs-h1);
+}
+
+h2 {
+    font-size: var(--fs-h2);
+}
+
+h3 {
+    font-size: var(--fs-h3);
+}
+
+.section__title {
+    letter-spacing: 1px;
+    margin-bottom: 0.25em;
+    text-transform: uppercase;
+}
+
+.section__subtitle {
+    margin: 0;
+    font-family: var(--ff-secondary);
+    font-size: var(--fs-h3);
+    letter-spacing: 0.5px;
+}
+
+.top {
+    top: 0;
+}
+
+.bottom {
+    bottom: 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
 }

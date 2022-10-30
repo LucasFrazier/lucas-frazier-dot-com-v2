@@ -1,0 +1,28 @@
+.event {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    padding: 13px;
+    box-shadow: var(--bs);
+}
+
+.img {
+    flex: 1;
+    margin: 10px;
+}
+
+.info {
+    flex: 2;
+}
+
+@media (max-width: 600px) {
+    .event {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .info {
+        margin-bottom: 20px;
+    }
+}

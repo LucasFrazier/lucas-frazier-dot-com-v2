@@ -1,0 +1,61 @@
+.about-me {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about-me__img {
+    border-radius: var(--border-radius);
+    box-shadow: var(--bs);
+}
+
+.about-me__body {
+    font-family: var(--ff-secondary);
+    font-weight: var(--fw-light);
+    letter-spacing: 0.5px;
+    margin: 2em auto 3.5em;
+}
+
+@media (min-width: 600px) {
+    .about-me__body {
+        margin: unset;
+    }
+}
+
+@media (min-width: 600px) {
+    .about-me {
+        display: grid;
+        grid-template-columns: 1fr 200px;
+        grid-template-areas:
+            'title img'
+            'subtitle img'
+            'text img';
+        grid-column-gap: 2em;
+    }
+
+    .section__title--about {
+        grid-area: title;
+    }
+
+    .section__subtitle--about {
+    }
+
+    .section__subtitle--about {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        position: relative;
+        left: -1em;
+        width: calc(100% + 2em);
+        padding: 0.25em calc(200px + 4em) 0.25em 1em;
+        background: var(--clr-accent);
+        border-radius: var(--border-radius);
+        font-family: var(--ff-secondary);
+        letter-spacing: 0.5px;
+        margin-bottom: 1em;
+    }
+
+    .about-me__img {
+        grid-area: img;
+        position: relative;
+        z-index: 2;
+    }
+}

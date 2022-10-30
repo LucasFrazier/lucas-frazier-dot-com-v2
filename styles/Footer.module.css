@@ -1,0 +1,45 @@
+.footer {
+    background: var(--clr-black);
+    color: var(--clr-accent);
+    text-align: center;
+    padding: 2.5em 0;
+    font-size: var(--fs-h3);
+}
+
+.footer a {
+    color: var(--clr-light);
+    text-decoration: none;
+}
+
+.footer__link {
+    font-weight: var(--fw-bold);
+}
+
+.footer__link:hover,
+.social-list__link:hover {
+    color: var(--clr-accent);
+}
+
+.footer__link:hover {
+    text-decoration: underline;
+}
+
+.social-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.social-list__item {
+    margin: 0 0.5em;
+}
+
+.social-list__link {
+    padding: 0.5em;
+}
+
+/* Stop Font Awesome icons from being italic */
+i.fab {
+    font-style: normal !important;
+}
