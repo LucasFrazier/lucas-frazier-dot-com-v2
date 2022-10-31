@@ -1,6 +1,5 @@
 import cookie from 'cookie'
 import { BACKEND_API_URL } from '@config/index'
-import { strict } from 'assert'
 
 export default async (req, res) => {
     if (req.method === 'GET') {
